@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$font:'Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace';
+$navbarcolour: #cc9900;
+
+body{
+  font-family: $font;
+
+}
+
+h1{
+
+text-align: center;
+
+}
+
+p{
+
+  text-align: center;
+  font-size: 15px;
+}
