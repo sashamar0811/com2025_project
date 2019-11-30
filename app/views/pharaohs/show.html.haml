@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @pharaoh.name
+%p
+  %b String:
+  = @pharaoh.string
+%p
+  %b Tenure:
+  = @pharaoh.tenure
+%p
+  %b Stringsuccessor:
+  = @pharaoh.stringsuccessor
+%p
+  %b String:
+  = @pharaoh.string
+%p
+  %b Biography:
+  = @pharaoh.biography
+%p
+  %b Text:
+  = @pharaoh.text
+
+= link_to 'Edit', edit_pharaoh_path(@pharaoh)
+\|
+= link_to 'Back', pharaohs_path

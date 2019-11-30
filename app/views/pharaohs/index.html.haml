@@ -1,0 +1,33 @@
+%h1 Listing pharaohs
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th String
+      %th Tenure
+      %th Stringsuccessor
+      %th String
+      %th Biography
+      %th Text
+      %th
+      %th
+      %th
+
+  %tbody
+    - @pharaohs.each do |pharaoh|
+      %tr
+        %td= pharaoh.name
+        %td= pharaoh.string
+        %td= pharaoh.tenure
+        %td= pharaoh.stringsuccessor
+        %td= pharaoh.string
+        %td= pharaoh.biography
+        %td= pharaoh.text
+        %td= link_to 'Show', pharaoh
+        %td= link_to 'Edit', edit_pharaoh_path(pharaoh)
+        %td= link_to 'Destroy', pharaoh, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Pharaoh', new_pharaoh_path

@@ -1,0 +1,31 @@
+= form_for @pharaoh do |f|
+  - if @pharaoh.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@pharaoh.errors.count, "error")} prohibited this pharaoh from being saved:"
+      %ul
+        - @pharaoh.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :string
+    = f.text_field :string
+  .field
+    = f.label :tenure
+    = f.text_field :tenure
+  .field
+    = f.label :stringsuccessor
+    = f.text_field :stringsuccessor
+  .field
+    = f.label :string
+    = f.text_field :string
+  .field
+    = f.label :biography
+    = f.text_field :biography
+  .field
+    = f.label :text
+    = f.text_field :text
+  .actions
+    = f.submit 'Save'
