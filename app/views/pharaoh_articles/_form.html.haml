@@ -1,0 +1,16 @@
+= form_for @pharaoh_article do |f|
+  - if @pharaoh_article.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@pharaoh_article.errors.count, "error")} prohibited this pharaoh_article from being saved:"
+      %ul
+        - @pharaoh_article.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :pharaoh
+    = f.text_field :pharaoh
+  .field
+    = f.label :article
+    = f.text_field :article
+  .actions
+    = f.submit 'Save'
