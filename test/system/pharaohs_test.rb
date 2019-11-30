@@ -16,10 +16,8 @@ class PharaohsTest < ApplicationSystemTestCase
 
     fill_in "Biography", with: @pharaoh.biography
     fill_in "Name", with: @pharaoh.name
-    fill_in "String", with: @pharaoh.string
-    fill_in "Stringsuccessor", with: @pharaoh.stringsuccessor
+    fill_in "Successor", with: @pharaoh.successor
     fill_in "Tenure", with: @pharaoh.tenure
-    fill_in "Text", with: @pharaoh.text
     click_on "Create Pharaoh"
 
     assert_text "Pharaoh was successfully created"
@@ -32,10 +30,8 @@ class PharaohsTest < ApplicationSystemTestCase
 
     fill_in "Biography", with: @pharaoh.biography
     fill_in "Name", with: @pharaoh.name
-    fill_in "String", with: @pharaoh.string
-    fill_in "Stringsuccessor", with: @pharaoh.stringsuccessor
+    fill_in "Successor", with: @pharaoh.successor
     fill_in "Tenure", with: @pharaoh.tenure
-    fill_in "Text", with: @pharaoh.text
     click_on "Update Pharaoh"
 
     assert_text "Pharaoh was successfully updated"

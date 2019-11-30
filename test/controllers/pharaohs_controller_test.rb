@@ -17,7 +17,7 @@ class PharaohsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create pharaoh" do
     assert_difference('Pharaoh.count') do
-      post pharaohs_url, params: { pharaoh: { biography: @pharaoh.biography, name: @pharaoh.name, string: @pharaoh.string, stringsuccessor: @pharaoh.stringsuccessor, tenure: @pharaoh.tenure, text: @pharaoh.text } }
+      post pharaohs_url, params: { pharaoh: { biography: @pharaoh.biography, name: @pharaoh.name, successor: @pharaoh.successor, tenure: @pharaoh.tenure } }
     end
 
     assert_redirected_to pharaoh_url(Pharaoh.last)
@@ -34,7 +34,7 @@ class PharaohsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update pharaoh" do
-    patch pharaoh_url(@pharaoh), params: { pharaoh: { biography: @pharaoh.biography, name: @pharaoh.name, string: @pharaoh.string, stringsuccessor: @pharaoh.stringsuccessor, tenure: @pharaoh.tenure, text: @pharaoh.text } }
+    patch pharaoh_url(@pharaoh), params: { pharaoh: { biography: @pharaoh.biography, name: @pharaoh.name, successor: @pharaoh.successor, tenure: @pharaoh.tenure } }
     assert_redirected_to pharaoh_url(@pharaoh)
   end
 

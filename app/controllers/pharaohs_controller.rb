@@ -69,6 +69,6 @@ class PharaohsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pharaoh_params
-      params.require(:pharaoh).permit(:name, :string, :tenure, :stringsuccessor, :string, :biography, :text)
+      params.require(:pharaoh).permit(:name, :tenure, :successor, :biography)
     end
 end

@@ -10,22 +10,13 @@
     = f.label :name
     = f.text_field :name
   .field
-    = f.label :string
-    = f.text_field :string
-  .field
     = f.label :tenure
     = f.text_field :tenure
   .field
-    = f.label :stringsuccessor
-    = f.text_field :stringsuccessor
-  .field
-    = f.label :string
-    = f.text_field :string
+    = f.label :successor
+    = f.text_field :successor
   .field
     = f.label :biography
-    = f.text_field :biography
-  .field
-    = f.label :text
-    = f.text_field :text
+    = f.text_area :biography
   .actions
     = f.submit 'Save'
