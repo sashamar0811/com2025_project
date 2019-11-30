@@ -15,9 +15,36 @@
     = javascript_include_tag 'modernizr'
     = csrf_meta_tags
 
-  %body
-  
-    - flash.each do |key, value|
-      = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?
+    %body
+
+    %nav.navbar.navbar-default{:role => "navigation"}
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+
+          %ul.nav.navbar-nav.navbar-left
+            %li
+              %a{:href => "http://localhost:3000"} Home
+        / Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              %a{:href => "http://localhost:3000/contact"} Contact Us
+              %li
+                %a{:href => "#"} Sign Up
+            %li.dropdown
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                Account
+                %span.caret
+              %ul.dropdown-menu{:role => "menu"}
+                %li
+                  %a{:href => "#"} Calendar
+
+                %li.divider
+                %li
+                %a{:href => "#"} Log Out
+
 
     = yield
