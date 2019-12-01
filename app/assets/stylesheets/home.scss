@@ -16,9 +16,9 @@ form input{
 
  .button{
 
-  box-shadow: 0px 10px 14px -7px #91b8b3;
-	background:linear-gradient(to bottom, #8c8c75 5%, #6c7c7c 100%);
-	background-color:#8c8c75;
+  box-shadow: 0px 10px 14px -7px #cc9900;
+	background:linear-gradient(to bottom, #cc9900 5%, #6c7c7c 100%);
+	background-color:#cc9900;
 	border-radius:4px;
 	border:1px solid #566963;
 	display:inline-block;
@@ -33,27 +33,41 @@ form input{
 }
 
 img {
-  border-radius: 8px;
-  width: 100%;
+
+  width: 30%;
   height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+  flex: 0 0 20%
+
 }
 
 .pictures{
+  padding-top: 150px;
   display: flex;
-  justify-content: space-evenly;
+
+flex-grow: 0;
+
+flex-direction: row;
+justify-content: space-between;
 
 }
 .pic{
-  padding: 40px;
-  padding-top: 150px;
-  width: 10;
-  height: 10;
-  flex-flow: row nowrap;
+  padding: 0px;
+
+  width: 150px;
+  margin: 5em;
   align-items: center;
-
-
-
+  flex-grow: 1;
+  flex: 2 4 auto;
+  flex-grow: 0;
+ border-radius: 50%;
+   transition: transform .2s;
+}
+.pic:hover{
+  -ms-transform: scale(2.0); /* IE 9 */
+  -webkit-transform: scale(2.0); /* Safari 3-8 */
+  transform: scale(2.0);
 }
