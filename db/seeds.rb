@@ -95,3 +95,13 @@ New Kingdom: The New Kingdom is comprised of three dynasties: the 18th with its 
 Famous pharaohs from the 18th Dynasty include Hatshepsut, the greatest of all female rulers; Akhenaten, who promoted the idea of a single deity to be worshipped; and Tutankhamun, not particularly noteworthy in his own right, save for the fact that his luxurious tomb in the Valley of the Kings was discovered in 1922 by Howard Carter in relatively intact condition.
 
 The name that dominates the later New Kingdom period is Rameses, with eleven such pharaohs bridging the 19th and 20th Dynasties (two from the 19th, nine from the 20th). Of these, the most famous by far is Rameses II (1279-1213 B.C.E.), associated by most scholars, myself included, with the pharaoh who instituted the slavery of the Hebrews in Exodus. Also noteworthy is his son Merneptah (1213-1203 B.C.E.), whose famous victory stela includes the oldest extra-biblical reference (and the only such one in Egyptian annals) to Israel.'])
+
+
+#Articles_Pharaohs
+
+
+pharaoh_article_one = PharaohArticle.where(pharaoh_id: tutankhamun_first, article_id: article_first ).first
+pharaoh_article_one.delete if pharaoh_article_one
+
+
+pharaoh_article_1 = PharaohArticle.create([pharaoh_id: tutankhamun_first, article_id: article_first ])

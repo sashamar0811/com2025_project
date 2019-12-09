@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :pharaoh_articles
   resources :articles
   resources :pharaohs
