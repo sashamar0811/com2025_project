@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 2019_12_09_151841) do
   create_table "pharaoh_articles", force: :cascade do |t|
     t.integer "pharaoh_id"
     t.integer "article_id"
+    t.string "name", null: false
+    t.string "title", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["article_id"], name: "index_pharaoh_articles_on_article_id"

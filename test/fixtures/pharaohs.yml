@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  tenure: MyString
-  successor: MyString
+  tenure: Tenure
+  successor: Successor
   biography: MyText
 
 two:
-  name: MyString
-  tenure: MyString
-  successor: MyString
-  biography: MyText
+  name: MyString2
+  tenure: Tenure2
+  successor: Successor2
+  biography: MyText2

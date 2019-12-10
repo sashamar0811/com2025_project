@@ -12,11 +12,13 @@
   %tbody
     - @pharaoh_articles.each do |pharaoh_article|
       %tr
-        %td= pharaoh_article.pharaoh
-        %td= pharaoh_article.article
+        %td= pharaoh_article.name
+        %td= pharaoh_article.title
         %td= link_to 'Show', pharaoh_article
         %td= link_to 'Edit', edit_pharaoh_article_path(pharaoh_article)
         %td= link_to 'Destroy', pharaoh_article, method: :delete, data: { confirm: 'Are you sure?' }
+
+
 
 %br
 

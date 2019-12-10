@@ -5,6 +5,7 @@ class PharaohArticlesController < ApplicationController
   # GET /pharaoh_articles.json
   def index
     @pharaoh_articles = PharaohArticle.all
+
   end
 
   # GET /pharaoh_articles/1
@@ -69,6 +70,6 @@ class PharaohArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pharaoh_article_params
-      params.require(:pharaoh_article).permit(:pharaoh_id, :article_id)
+      params.require(:pharaoh_article).permit(:pharaoh_id, :article_id, :name, :title)
     end
 end
