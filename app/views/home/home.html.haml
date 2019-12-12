@@ -1,14 +1,21 @@
 %h1=t('.title')
 %p=t('.welcome')
 
+
+
 .pictures
   = image_tag("amenhottep.jpeg", size: "90x90", :class => "pic")
   = "Amenhotep"
   = image_tag("hatshepsut.jpg", size: "90x90", :class => "pic")
   = "Hatshepsut"
-  = link_to image_tag("ramesses.jpg", size: "90x90", :class => "pic")#, "http://localhost:3000/pharaohs/4"
+  = link_to image_tag("ramesses.jpg", size: "90x90", :class => "pic"), "/pharaohs/Pharaoh/"
   = "Ramesses II"
   = image_tag("thutmos.jpg", size: "90x90", :class => "pic")
-  = "Thutmos"
+  = "Thutmose III"
   = image_tag("tutankhamun.jpg", size: "90x90", :class => "pic")
-  = "Tutankhamun" 
+  = "Tutankhamun"
+  -# <img src = "<%=Pharaoh.picture%>"
+-# <%
+-# Pharaoh.all.each do |p|
+-#
+-# %>

@@ -5,6 +5,9 @@
       %ul
         - @pharaoh.errors.full_messages.each do |message|
           %li= message
+  .field
+    = f.label :image
+    = f.file_field :image
 
   .field
     = f.label :name

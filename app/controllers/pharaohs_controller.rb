@@ -10,6 +10,7 @@ class PharaohsController < ApplicationController
   # GET /pharaohs/1
   # GET /pharaohs/1.json
   def show
+    @pharaoh = Pharaoh.find(params[:id])
   end
 
   # GET /pharaohs/new

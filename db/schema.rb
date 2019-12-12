@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_09_151841) do
+ActiveRecord::Schema.define(version: 2019_12_12_170005) do
 
   create_table "articles", force: :cascade do |t|
     t.string "author", null: false
@@ -39,6 +39,10 @@ ActiveRecord::Schema.define(version: 2019_12_09_151841) do
     t.text "biography", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
     t.index ["name"], name: "index_pharaohs_on_name", unique: true
   end
 
