@@ -29,9 +29,10 @@ h1{
 
 padding-top: 40px;
 text-align: center;
-
+color: #444444;
+background: #FFFFFF;
+text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE;
 }
-
 p{
   padding-top: 20px;
 
@@ -39,6 +40,9 @@ p{
   font-size: 18px;
   font-family: $font;
   padding: 10px;
+  color: #444444;
+  background: #FFFFFF;
+  text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE;
 }
 
 
@@ -70,12 +74,13 @@ p{
   }
 
 .navbar.navbar-default {
-background-color: $navbarcolour;
+background-color: $navbarcolour !important;
 padding-top: 0px;
 margin: 0;
   font-size: 15px;
-   color:  #000000 !important;
-
+  color: #444444 !important;
+  background: #FFFFFF;
+  text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE
 }
 .navbar-brand{
   position: relative;

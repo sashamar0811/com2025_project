@@ -8,9 +8,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'home#contact'
   post 'request_contact', to: 'home#request_contact'
 
-  get '/pharaohs/:id', to: 'pharaohs#show'
-
-  resources :pharaohs
+  # get '/pharaohs/:id', to: 'pharaohs#show'
 
   # get 'pharaohs/:name', to: 'pharaohs#show'
 

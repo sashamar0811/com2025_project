@@ -60,37 +60,107 @@ img {
 
 }
 
-.pictures{
-  padding-top: 100px;
-  display: flex;
+// .pictures{
+//   padding-top: 100px;
+//   display: flex;
+//
+//   flex-grow: 0;
+// padding: 0px;
+// padding-left: 150px;
+// padding-right: 150px;
+//   flex-direction: row;
+// //  justify-content: space-between;
+// // flex-wrap: wrap;
+// //  text-align: center;
+// //  align-items: top;
+// margin : auto ;
+// box-sizing: border-box;
+// position: absolute;
+// top: 50%;
+// transform: translateY(-50%);
+//
+// }
+// .pic{
+//   // padding: 0px;
+//   //
+//    width: 200px;
+//    height: 300px;
+//    line-height: 200px;
+// //   margin: 5em;
+//    align-items: center;
+//    flex-grow: 1;
+//    background: #ff6347;
+//   color: #ff6347;
+// //   flex: 2 4 auto;
+//
+//   // flex-grow: 0;
+//    transition: transform .5s;
+// }
+// .pic:hover{
+// //  -ms-transform: scale(2.0); /* IE 9 */
+// //  -webkit-transform: scale(2.0); /* Safari 3-8 */
+// //  transform: scale(2.0);
+//   flex-grow: 4;
+//   max-width: 100%;
+// }
 
-  flex-grow: 0;
-padding: 0px;
-padding-left: 150px;
-padding-right: 150px;
-  flex-direction: row;
-  justify-content: space-between;
- flex-wrap: wrap;
-  text-align: center;
-  align-items: top;
-margin : auto ;
+// .textHome{
+//
+//   position: absolute;
+//     left: 50%;                        /* horizontal alignment */
+//     top: 50%;                         /* vertical alignment */
+//     transform: translate(-50%, -50%);
+// }
 
+.textHome{
+
+width: 100vw;
+height: 100vh;
+display: flex;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-size: 2em;
+background: rgba(0, 0, 0,.8);
+transition: 5s;
+    text-align: center;
+
+
+
+// text-align: center;
+// line-height: 100vh;
+// flex-grow: 1;
+// background-size: cover;
+// background-position: center;
+// transition: 2s;
 }
-.pic{
-  // padding: 0px;
-  //
-   width: 200px;
-   height: 300px;
-   margin: 5em;
-   align-items: center;
-   flex-grow: 1;
-   flex: 2 4 auto;
-  // flex-grow: 0;
 
-   transition: transform .2s;
-}
-.pic:hover{
-  -ms-transform: scale(2.0); /* IE 9 */
-  -webkit-transform: scale(2.0); /* Safari 3-8 */
-  transform: scale(2.0);
+  .textHome.phar{
+    width: 20vw;
+    text-align: center;
+    line-height: 100vh;
+    flex-grow: 1;
+    background: url(mainpharoh.jpg);
+    background-position: center;
+    transition: 1s;
+    letter-spacing: 2px;
+  }
+  .textHome.art{
+    width: 20vw;
+    text-align: center;
+    line-height: 100vh;
+    flex-grow: 1;
+    background: url(papyrus.jpg);
+    background-position: center;
+    transition: 1s;
+    border-style: ridge;
+    box-shadow:0 0 5px #f66 ;
+  //  border-width: 15px;
+    border-radius: 5px;
+  }
+.textHome:hover{
+  background: rgba(255, 255, 255, 0);
+  letter-spacing: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+   
 }

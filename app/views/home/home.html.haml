@@ -2,10 +2,17 @@
 %p=t('.welcome')
 
 
+-#
+-# //.pictures
+-#   -# = link_to image_tag("mainpharoh.jpg", size: "90x90", alt: "Pharaohs", :class => "pic"), "/pharaohs"
+-#
+-#   -# = link_to image_tag("papyrus.jpg", size: "90x90", alt: "Articles", :class => "pic"), "/articles"
 
-.pictures
-  = link_to image_tag("mainpharoh.jpg", size: "90x90", :class => "pic"), "/paharohs"
-  = link_to image_tag("papyrus.jpg", size: "90x90", :class => "pic"), "/articles"
+
+%span.textHome
+  %a.textHome.phar{:href => "/pharaohs"} Pharaohs
+  %a.textHome.art{:href => "/articles"} Articles
+
 
 
 -# .pictures

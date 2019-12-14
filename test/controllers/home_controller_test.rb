@@ -7,7 +7,7 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
 
     assert_select 'title', 'MerNeith'
     assert_select 'h1',  'MerNeith'
-    assert_select 'p', 'Share real stories from hisory with others!'
+    assert_select 'p', 'Your Ancient Eguptian Guide'
   end
 
   test "should get contact" do
