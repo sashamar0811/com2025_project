@@ -1,20 +1,18 @@
+-# .pharaohDesc
+-# %p.pharaoh.Image
+-#   %b
+-#   = image_tag (@pharaoh.image.url)
 
-
-%p.pharaoh
-  %b Image:
-  = image_tag (@pharaoh.image.url)
-
-%p.pharaoh
-  %b Name:
+%p.pharaoh.Name
   = @pharaoh.name
-%p.pharaoh
-  %b Tenure:
+%p
+  %b.pharaoh.Text Tenure
   = @pharaoh.tenure
-%p.pharaoh
-  %b Successor:
+%p
+  %b.pharaoh.Text Successor
   = @pharaoh.successor
-%p.pharaoh
-  %b.biography Biography:
+%p
+  %b.pharaoh.Text Biography
   = @pharaoh.biography
 
 -# = link_to 'Edit', edit_pharaoh_path(@pharaoh)

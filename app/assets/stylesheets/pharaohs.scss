@@ -1,3 +1,45 @@
 // Place all the styles related to the Pharaohs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+ .flexImages{
+
+   display: flex;
+
+   flex-grow: 0;
+   flex-direction: row;
+   justify-content: space-between;
+ flex-wrap: wrap;
+   text-align: center;
+  align-items: top;
+ margin : auto ;
+display: table;
+margin: 0 auto;
+ }
+
+.image{
+
+    margin: 0 auto;
+    text-align: center;
+ width:200px;
+ height:200px;
+  padding: 10px;
+  border-radius: 50%;
+   transition: transform .2s;
+
+}
+.image:hover{
+  -ms-transform: scale(2.0); /* IE 9 */
+  -webkit-transform: scale(2.0); /* Safari 3-8 */
+  transform: scale(2.0);
+}
+
+// .pharaoh.Image{
+//   padding-right: 0px;
+//   float: right;
+//   vertical-align: middle;
+//   border-radius: 50%;
+//    width:300px;
+//    height:300px;
+//
+// }

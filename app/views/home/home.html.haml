@@ -4,16 +4,21 @@
 
 
 .pictures
-  = image_tag("amenhottep.jpeg", size: "90x90", :class => "pic")
-  = "Amenhotep"
-  = image_tag("hatshepsut.jpg", size: "90x90", :class => "pic")
-  = "Hatshepsut"
-  = link_to image_tag("ramesses.jpg", size: "90x90", :class => "pic"), "/pharaohs/Pharaoh/"
-  = "Ramesses II"
-  = image_tag("thutmos.jpg", size: "90x90", :class => "pic")
-  = "Thutmose III"
-  = image_tag("tutankhamun.jpg", size: "90x90", :class => "pic")
-  = "Tutankhamun"
+  = link_to image_tag("mainpharoh.jpg", size: "90x90", :class => "pic"), "/paharohs"
+  = link_to image_tag("papyrus.jpg", size: "90x90", :class => "pic"), "/articles"
+
+
+-# .pictures
+-#   = image_tag("amenhottep.jpeg", size: "90x90", :class => "pic")
+-#   = "Amenhotep"
+-#   = image_tag("hatshepsut.jpg", size: "90x90", :class => "pic")
+-#   = "Hatshepsut"
+-#   = link_to image_tag("ramesses.jpg", size: "90x90", :class => "pic"), "/pharaohs/Pharaoh/"
+-#   = "Ramesses II"
+-#   = image_tag("thutmos.jpg", size: "90x90", :class => "pic")
+-#   = "Thutmose III"
+-#   = image_tag("tutankhamun.jpg", size: "90x90", :class => "pic")
+-#   = "Tutankhamun"
   -# <img src = "<%=Pharaoh.picture%>"
 -# <%
 -# Pharaoh.all.each do |p|
