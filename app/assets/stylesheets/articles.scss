@@ -1,3 +1,67 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+table{
+
+  border: 1px solid #ddd;
+   padding: 50px;
+   padding-top: 150px;
+width: 100%;
+}
+thead{
+  padding-top: 50px;
+}
+.headerArticle{
+padding: 50px;
+
+}
+.listArticles:hover{
+background-color: #ddd;
+
+}
+
+tr{
+  background-color: #f2f2f2;
+
+}
+
+th{
+  padding-top: 300px;
+   padding-bottom: 12px;
+   text-align: center;
+   background-color: #cc9900;
+   color: white;
+padding: 60px;
+}
+tr[data-link] {
+  cursor: pointer;
+}
+
+.authorArticle{
+font-size: 20px;
+text-align: center;
+vertical-align: top;
+display: block;
+padding: 0px;
+padding: 18px;
+}
+
+.titleArticle{
+  font-size: 20px;
+  text-align: center;
+  vertical-align: top;
+  display: block;
+  padding: 0px;
+  padding: 18px;
+
+}
+.textArticle{
+  font-size: 20px;
+  text-align: center;
+  vertical-align: top;
+  display: block;
+  padding: 0px;
+  padding: 18px;
+
+
+}

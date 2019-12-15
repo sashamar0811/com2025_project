@@ -10,6 +10,6 @@ Rails.application.routes.draw do
 
   # get '/pharaohs/:id', to: 'pharaohs#show'
 
-  # get 'pharaohs/:name', to: 'pharaohs#show'
+   get 'articles/:id', to: 'articles#show'
 
 end

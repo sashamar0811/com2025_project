@@ -4,10 +4,11 @@
     .navbar-header
       %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
 
-
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
       %a.navbar-brand
         = image_tag ("pyramid.jpg")
-      / Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li
@@ -19,23 +20,23 @@
         %button.btn.btn-default{:type => "submit"} Search
       %ul.nav.navbar-nav.navbar-right
         %li
+          %a{:href => "/users/sign_up"} Discussions
+        %li
           %a{:href => "/users/sign_up"} Sign Up
         %li
           %a{:href => "/contact"} Contact Us
+    
 
-
-
-
-%nav
-- if user_signed_in?
-  = "#{current_user.email} |"
-  = link_to t('profile'), edit_user_registration_path
-  = '|'
-  = link_to t('logout'), destroy_user_session_path, method: 'delete'
-- else
-  = link_to t('login'), new_user_session_path
-  = '|'
-  = link_to t('sign_up'), new_user_registration_path
+          .profile
+          - if user_signed_in?
+            = "#{current_user.email} |"
+            = link_to t('profile'), edit_user_registration_path
+            = '|'
+            = link_to t('logout'), destroy_user_session_path, method: 'delete'
+          - else
+            = link_to t('login'), new_user_session_path
+            = '|'
+            = link_to t('sign_up'), new_user_registration_path
 
 
 - flash.each do |key, value|

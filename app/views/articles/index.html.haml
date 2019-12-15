@@ -1,25 +1,31 @@
-%h1 Listing articles
+%h1 Articles
 
 %table
   %thead
-    %tr
+    %tr.headerArticle
       %th Author
       %th Title
-      %th Articletext
-      %th
-      %th
-      %th
+
 
   %tbody
     - @articles.each do |article|
-      %tr
-        %td= article.author
+      %tr.listArticles{"data-link" => url_for(:action => 'show', :id => article.id)}
+
+        %td.author= article.author
         %td= article.title
-        %td= article.articleText
-        %td= link_to 'Show', article
-        %td= link_to 'Edit', edit_article_path(article)
-        %td= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }
+        -# -# %td= article.articleText
+        -# %td= link_to 'Show', article
+        -# %td= link_to 'Edit', edit_article_path(article)
+        -# %td= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }
 
-%br
+-# %br
+-#
+-# = link_to 'New Article', new_article_path
+-# - {"data-link" => url_for(:action => 'show', :id => article.id)}
 
-= link_to 'New Article', new_article_path
+:javascript
+  $(document).ready(function(){
+    $(".listArticles[data-link]").click(function(item) {
+      window.location = $(this).data("link");
+    });
+  });
