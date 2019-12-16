@@ -1,9 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  name: three
+  title: four
   pharaoh: one
   article: one
-
 two:
+  name: three1
+  title: four1
   pharaoh: two
   article: two

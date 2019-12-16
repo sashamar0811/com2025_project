@@ -16,3 +16,26 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+// Function to allow user to click on a row in a table
+$(document).ready(function(){
+  $(document).on('click', '.listArticles[data-link]', (function(item) {
+      window.location = $(this).data("link");
+  }));
+});
+
+
+// Validation for 'Contact' Page
+function validatearticleFunction() {
+  $('#contact').validate({
+    debug: false,
+    rules: {
+      name: { name:true, required: true},
+      email: {email:true, required: true} ,
+      message: { message:true, required: true},
+      telephone: { telephone:true, required: true},
+           }
+        })
+      }
+$(document).ready(validatearticleFunction);
+$(document).on('page:load', validatearticleFunction);

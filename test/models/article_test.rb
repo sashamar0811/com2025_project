@@ -36,7 +36,7 @@ class ArticleTest < ActiveSupport::TestCase
        article2 .title = 'The New Kingdom & the Amarna Period'
        article2 .articleText = 'Hello'
        article2 .save
-       assert article2 .valid?
+       refute article2 .valid?
 
     end
 end

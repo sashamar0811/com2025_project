@@ -1,8 +1,3 @@
--# .pharaohDesc
--# %p.pharaoh.Image
--#   %b
--#   = image_tag (@pharaoh.image.url)
-
 %p.pharaoh.Name
   = @pharaoh.name
 %p
@@ -15,6 +10,9 @@
   %b.pharaoh.Text Biography
   = @pharaoh.biography
 
--# = link_to 'Edit', edit_pharaoh_path(@pharaoh)
--# \|
--# = link_to 'Back', pharaohs_path
+-# Shows articles where current pharaoh appears
+
+%ul#pharArt
+  %b.pharaoh.Text Read more about this pharaoh here
+  - @pharaoh.articles.each do |article|
+    %li= link_to article.title,article_path(id: article.id)

@@ -31,12 +31,14 @@
 
 en:
   app_title: MerNeith
-  app_description: A place where you read about real stories from the past.
+  app_description: Your Ancient Eguptian Guide
 
   home:
     home:
       title: MerNeith
       welcome: Your Ancient Eguptian Guide
+      pharaoh_title: "Pharaohs"
+      article_title: "Articles"
 
     contact:
       title: MerNeith
@@ -55,3 +57,18 @@ en:
       request_contact:
         no_emai: Please type valid email.
         email_sent: Thank you for your enquiry. You should recive a response in the next 2 working days.
+
+  shared:
+    header:
+      home: "Home"
+      pharaohs: "Pharaohs"
+      articles: "Articles"
+      contact_nav: "Contact Us"
+
+  pharaohs:
+    index:
+      titlepharaohs: "Pharaohs"
+
+  articles:
+    index:
+      titlearticles: "Articles"

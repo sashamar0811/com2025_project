@@ -19,111 +19,85 @@
 
 $font:'Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace';
 $navbarcolour: #cc9900;
+$textshadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC;
+
+html, body{
+  height: 100%;
+  margin: 0;
+}
 
 body{
   font-family: $font;
-min-height: 100%;
-
+  display: flex;
+  flex-direction: column;
 }
 
 h1{
-
-padding-top: 40px;
-text-align: center;
-color: #444444;
-background: #FFFFFF;
-text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE;
+  padding-top: 40px;
+  text-align: center;
+  color: #444444;
+  background: #FFFFFF;
+  text-shadow: $textshadow;
 }
 
 p{
   padding-top: 20px;
-
   text-align: center;
   font-size: 18px;
   font-family: $font;
   padding: 10px;
-letter-spacing: 5px;
+  letter-spacing: 5px;
+}
+
+.all-wrapper{
+  flex: 1 0 auto;
+  position: relative;
 }
 
 .welcomeNote{
   background: #FFFFFF;
-    text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE;
-  }
-
-
-  .pharaoh{
-
-    text-align: center;
-    padding-top: 15px;
-  }
-  .pharaoh.Name{
-    font-size: 35px;
-    font-weight: bold;
-    border-style: ridge;
-    box-shadow:0 0 5px #f66 ;
-  //  border-width: 15px;
-    border-radius: 5px;
-     width: 17%;
-    height: 50px;
-    margin: 0 auto;
-
-  }
-  .pharaoh.Text{
-    font-size: 20px;
-    text-align: center;
-    vertical-align: top;
-   display: block;
-   padding: 0px;
-   padding: 18px;
-
-  }
+  text-shadow: $textshadow;
+}
 
 .navbar.navbar-default {
-background-color: $navbarcolour;
-padding-top: 0px;
-margin: 0;
+  background-color: $navbarcolour;
+  padding-top: 0px;
+  margin: 0;
   font-size: 15px;
-   color:  #ecf0f1 !important;
-
+  color:  #ecf0f1 !important;
+  flex: none;
 }
+
 .navbar-brand{
   position: relative;
   width: 170px;
   left: 0px;
-   height: auto;
-
-
+  height: auto;
 }
 
-
-
 .nav a{
-
   font-size: 20px;
   width: 100%;
-    left: 0px;
+  left: 0px;
+  font-family: $font;
+  padding: 0;
+  margin: 0;
+  padding-top: 30px !important;
+  display: inline-block;
+  text-align:center ;
+  color:  #ecf0f1 !important;
+  padding-left: 40px;
+}
 
-     font-family: $font;
-     padding: 0;
-     margin: 0;
-     padding-top: 30px !important;
-     display: inline-block;
-     text-align:center ;
-     color:  #ecf0f1 !important;
-     padding-left: 40px;
-   }
-   .profile{
-     padding-right: 0;
-     text-align: center;
-      color:  #ecf0f1 !important;
-      float: right;
+.profile{
+  padding-right: 0;
+  text-align: center;
+  color:  #ecf0f1 !important;
+  float: right;
+}
 
-   }
-
-   .footer{
-  position: absolute;
-   bottom: 0;
-   width: 100%;
-
-
-   }
+.footer{
+  width: 100%;
+  flex-shrink: 0;
+  background-color: $navbarcolour;
+}

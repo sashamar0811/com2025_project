@@ -2,44 +2,71 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
- .flexImages{
+$font:'Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace';
 
-   display: flex;
-
-   flex-grow: 0;
-   flex-direction: row;
-   justify-content: space-between;
- flex-wrap: wrap;
-   text-align: center;
+.flexImages{
+  display: flex;
+  flex-grow: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
   align-items: top;
- margin : auto ;
-display: table;
-margin: 0 auto;
- }
+  margin : auto ;
+  display: table;
+  margin: 0 auto;
+}
 
 .image{
-
-    margin: 0 auto;
-    text-align: center;
- width:200px;
- height:200px;
+  margin: 0 auto;
+  text-align: center;
+  width:200px;
+  height:200px;
   padding: 10px;
   border-radius: 50%;
-   transition: transform .2s;
-
+  transition: transform .2s;
 }
+
 .image:hover{
-  -ms-transform: scale(2.0); /* IE 9 */
-  -webkit-transform: scale(2.0); /* Safari 3-8 */
+  -ms-transform: scale(2.0);
+  -webkit-transform: scale(2.0);
   transform: scale(2.0);
 }
 
-// .pharaoh.Image{
-//   padding-right: 0px;
-//   float: right;
-//   vertical-align: middle;
-//   border-radius: 50%;
-//    width:300px;
-//    height:300px;
-//
-// }
+#pharArt{
+  text-align: center;
+  font-size: 20px;
+  text-align: center;
+  vertical-align: top;
+  display: block;
+  padding: 10px;
+  padding: 18px;
+  list-style: none;
+  font-family: $font;
+}
+
+.pharaoh{
+  text-align: center;
+  padding-top: 15px;
+}
+
+.pharaoh.Name{
+  font-size: 35px;
+  font-weight: bold;
+  border-style: ridge;
+  box-shadow:0 0 5px #f66 ;
+  border-radius: 5px;
+   width: 17%;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.pharaoh.Text{
+  font-size: 20px;
+  text-align: center;
+  vertical-align: top;
+  display: block;
+  padding: 0px;
+  padding: 18px;
+
+}

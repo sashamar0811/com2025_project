@@ -8,44 +8,71 @@
 
 
 
-# phar_art_one = PharaohArticle.where(pharaoh_id: Pharaoh.where(name: 'Tutankhamun').first.id , article_id: Article.where(title: 'The New Kingdom & the Amarna Period').first.id).first
-# phar_art_one.delete if phar_art_one
-#
-#
-# phar_art_two = PharaohArticle.where(pharaoh_id: Pharaoh.where(name: 'Ramesses II').first.id).first
-# phar_art_two.delete if phar_art_two
-#
-# phar_art_three = PharaohArticle.where(pharaoh_id: Pharaoh.where(name: 'Hatshepsut').first.id).first
-# phar_art_three.delete if phar_art_three
-#
-ramesses = Pharaoh.where(name: 'Ramesses II').first
-  ramesses.delete if ramesses
-
-
- # #Pharaohs:
-
- ramesses_second = Pharaoh.create([image: File.new("app/assets/images/ramesses.jpg"), name: 'Ramesses II', tenure: '1303–ca 1213 B.C.', successor: 'Merneptah', biography: 'Ramses II recognized that diplomacy and an exhaustive public relations campaign could mitigate any military shortcomings. His celebrated building accomplishments, including the marvels at Karnak and Abu Simbel, reflected his vision of a great nation and of himself as the “ruler of rulers.” He erected more monuments and statues—and sired more children—than any other pharaoh. As a result, he has long been regarded by Egyptians as Ramses the Great and his 66-year reign is considered to be the height of Egypt’s power and glory.'])
-
-
- amenhotep = Pharaoh.where(name: 'Amenhotep III').first
-  amenhotep.delete if amenhotep
-
-amenhotep_third = Pharaoh.create([image: File.new("app/assets/images/amenhottep.jpeg"), name: 'Amenhotep III', tenure: '1386 to 1349 B.C.', successor: 'Akhenaten', biography: 'Amenhotep III became the legal pharaoh of Egypt at the age of 12. Amenhotep III was an excellent ruler who helped Egypt thrive. During his reign, he not only built magnificent palaces and statues (some as tall as a six-story building!), but also was a skilled diplomat. He made great connections with surrounding nations, not by trying to conquer them or forcing submission, but by giving them large gifts of gold, which put them in the debt of Egypt. His focus was on maintaining Egypt as a lavish and peaceful kingdom, and putting his effort into creating new buildings and sculptures.'])
 
 
 
-  hatshepsut = Pharaoh.where(name: 'Hatshepsut').first
-  hatshepsut.delete if hatshepsut
+# Delete pharaoh_articles before creating them
+
+phar_article_one = PharaohArticle.where(name: 'Tutankhamun', title: 'The New Kingdom & the Amarna Period').first
+  phar_article_one.delete if phar_article_one
+
+phar_article_two = PharaohArticle.where(name: 'Ramesses II', title: 'The New Kingdom & the Amarna Period').first
+  phar_article_two.delete if phar_article_two
+
+phar_article_three = PharaohArticle.where(name: 'Hatshepsut', title: 'An Overview of Egyptian Dynastic History').first
+  phar_article_three.delete if phar_article_three
+
+phar_article_four = PharaohArticle.where(name: 'Hatshepsut', title: 'The truth behind Egypt’s female pharaohs and their power').first
+  phar_article_four.delete if phar_article_four
+
+phar_article_five = PharaohArticle.where(name: 'Amenhotep III', title: 'Discovery of a part of Amenhotep III statue').first
+  phar_article_five.delete if phar_article_five
 
 
- hatshepsut_first = Pharaoh.create([image: File.new("app/assets/images/hatshepsut.jpg"), name: 'Hatshepsut', tenure: '1473 to 1458 B.C.', successor: 'Thutmose III', biography: 'Hatshepsut was the longest-reigning female pharaoh in Egypt, ruling for 20 years in the 15th century B.C. She is considered one of Egypts most successful pharaohs. She served as queen alongside her husband, Thutmose II, but after his death, she claimed the role of pharaoh while acting as regent to her step-son, Thutmose III. She reigned peaceably, building temples and monuments, resulting in the flourishing of Egypt. After her death, Thutmose III erased her inscriptions and tried to eradicate her memory.'])
+# Delete pharaohs before creating them
+
+  ramesses = Pharaoh.where(name: 'Ramesses II', tenure: '1303–ca 1213 B.C.', successor: 'Merneptah', biography: 'Ramses II recognized that diplomacy and an exhaustive public relations campaign could mitigate any military shortcomings. His celebrated building accomplishments, including the marvels at Karnak and Abu Simbel, reflected his vision of a great nation and of himself as the “ruler of rulers.” He erected more monuments and statues—and sired more children—than any other pharaoh. As a result, he has long been regarded by Egyptians as Ramses the Great and his 66-year reign is considered to be the height of Egypt’s power and glory.').first
+    ramesses.delete if ramesses
+
+  amenhotep = Pharaoh.where(name: 'Amenhotep III', tenure: '1386 to 1349 B.C.', successor: 'Akhenaten', biography: 'Amenhotep III became the legal pharaoh of Egypt at the age of 12. Amenhotep III was an excellent ruler who helped Egypt thrive. During his reign, he not only built magnificent palaces and statues (some as tall as a six-story building!), but also was a skilled diplomat. He made great connections with surrounding nations, not by trying to conquer them or forcing submission, but by giving them large gifts of gold, which put them in the debt of Egypt. His focus was on maintaining Egypt as a lavish and peaceful kingdom, and putting his effort into creating new buildings and sculptures').first
+    amenhotep.delete if amenhotep
+
+  hatshepsut = Pharaoh.where(name: 'Hatshepsut', tenure: '1473 to 1458 B.C.', successor: 'Thutmose III', biography: 'Hatshepsut was the longest-reigning female pharaoh in Egypt, ruling for 20 years in the 15th century B.C. She is considered one of Egypts most successful pharaohs. She served as queen alongside her husband, Thutmose II, but after his death, she claimed the role of pharaoh while acting as regent to her step-son, Thutmose III. She reigned peaceably, building temples and monuments, resulting in the flourishing of Egypt. After her death, Thutmose III erased her inscriptions and tried to eradicate her memory.').first
+    hatshepsut.delete if hatshepsut
+
+  tutankhamun_one = Pharaoh.where(name: 'Tutankhamun', tenure: ' 1334 – 1325 B.C.', successor: 'Ay', biography: 'Tutankhamun, colloquially known as King Tut, was the 12th pharaoh of the 18th Egyptian dynasty. Although his rule was notable for reversing the tumultuous religious reforms of his father, Pharaoh Akhenaten, Tutankhamun’s legacy was largely negated by his successors. He was barely known to the modern world until 1922, when British archaeologist Howard Carter chiseled through a doorway and entered the boy pharaoh’s tomb, which had remained sealed for more than 3,200 years.').first
+    tutankhamun_one.delete if tutankhamun_one
+
+
+# Delete articles before creating them
+
+  article_one = Article.where(title: 'The New Kingdom & the Amarna Period').first
+    article_one.delete if article_one
+
+  article_two = Article.where(title: 'An Overview of Egyptian Dynastic History').first
+    article_two.delete if article_two
+
+  article_three = Article.where(title: 'The truth behind Egypt’s female pharaohs and their power').first
+    article_three.delete if article_three
+
+
+  article_four = Article.where(title: 'Discovery of a part of Amenhotep III statue').first
+    article_four.delete if article_four
 
 
 
 
 
-  tutankhamun_one = Pharaoh.where(name: 'Tutankhamun').first
-  tutankhamun_one.delete if tutankhamun_one
+
+ #Pharaohs:
+
+  ramesses_second = Pharaoh.create([image: File.new("app/assets/images/ramesses.jpg"), name: 'Ramesses II', tenure: '1303–ca 1213 B.C.', successor: 'Merneptah', biography: 'Ramses II recognized that diplomacy and an exhaustive public relations campaign could mitigate any military shortcomings. His celebrated building accomplishments, including the marvels at Karnak and Abu Simbel, reflected his vision of a great nation and of himself as the “ruler of rulers.” He erected more monuments and statues—and sired more children—than any other pharaoh. As a result, he has long been regarded by Egyptians as Ramses the Great and his 66-year reign is considered to be the height of Egypt’s power and glory.'])
+
+
+  amenhotep_third = Pharaoh.create([image: File.new("app/assets/images/amenhottep.jpeg"), name: 'Amenhotep III', tenure: '1386 to 1349 B.C.', successor: 'Akhenaten', biography: 'Amenhotep III became the legal pharaoh of Egypt at the age of 12. Amenhotep III was an excellent ruler who helped Egypt thrive. During his reign, he not only built magnificent palaces and statues (some as tall as a six-story building!), but also was a skilled diplomat. He made great connections with surrounding nations, not by trying to conquer them or forcing submission, but by giving them large gifts of gold, which put them in the debt of Egypt. His focus was on maintaining Egypt as a lavish and peaceful kingdom, and putting his effort into creating new buildings and sculptures.'])
+
+
+  hatshepsut_first = Pharaoh.create([image: File.new("app/assets/images/hatshepsut.jpg"), name: 'Hatshepsut', tenure: '1473 to 1458 B.C.', successor: 'Thutmose III', biography: 'Hatshepsut was the longest-reigning female pharaoh in Egypt, ruling for 20 years in the 15th century B.C. She is considered one of Egypts most successful pharaohs. She served as queen alongside her husband, Thutmose II, but after his death, she claimed the role of pharaoh while acting as regent to her step-son, Thutmose III. She reigned peaceably, building temples and monuments, resulting in the flourishing of Egypt. After her death, Thutmose III erased her inscriptions and tried to eradicate her memory.'])
 
 
   tutankhamun_first = Pharaoh.create([image: File.new("app/assets/images/tutankhamun.jpg"), name: 'Tutankhamun', tenure: ' 1334 – 1325 B.C.', successor: 'Ay', biography: 'Tutankhamun, colloquially known as King Tut, was the 12th pharaoh of the 18th Egyptian dynasty. Although his rule was notable for reversing the tumultuous religious reforms of his father, Pharaoh Akhenaten, Tutankhamun’s legacy was largely negated by his successors. He was barely known to the modern world until 1922, when British archaeologist Howard Carter chiseled through a doorway and entered the boy pharaoh’s tomb, which had remained sealed for more than 3,200 years.'])
@@ -53,10 +80,6 @@ amenhotep_third = Pharaoh.create([image: File.new("app/assets/images/amenhottep.
 
 
   #Articles:
-
-
- article_one = Article.where(title: 'The New Kingdom & the Amarna Period').first
-  article_one.delete if article_one
 
  article_first= Article.create([title: 'The New Kingdom & the Amarna Period', author: 'Joshua J. Mark', articleText: 'Ahmose I initiated what is known as the period of the New Kingdom of Egypt (c. 1570 - c. 1069 BCE) which again saw great prosperity in the land under a strong central government. The title of pharaoh for the ruler of Egypt comes from the period of the New Kingdom; earlier monarchs were simply known as kings. Many of the Egyptian sovereigns best known today ruled during this period and the majority of the great structures of Egyptian architecture such as the Ramesseum, Abu Simbel, the temples of Karnak and Luxor, and the tombs of the Valley of the Kings and Valley of the Queens were either created or greatly enhanced during this time.
 
@@ -72,8 +95,7 @@ amenhotep_third = Pharaoh.create([image: File.new("app/assets/images/amenhottep.
 
   Ramesses IIs fourth son, Khaemweset (c. 1281 - c. 1225 BCE), is known as the "First Egyptologist" for his efforts in preserving and recording old monuments, temples, and their original owner s names. It is largely due to Khaemweset s initiative that Ramesses II s name is so prominent at so many ancient sites in Egypt. Khaemweset left a record of his own efforts, the original builder/owner of the monument or temple, and his fathers name as well. Ramesses II became known to later generations as The Great Ancestor and reigned for so long that he outlived most of his children and his wives. In time, all of his subjects had been born knowing only Ramesses II as their ruler and had no memory of another. He enjoyed an exceptionally long life of 96 years, over double the average lifespan of an ancient Egyptian. Upon his death, it is recorded that many feared the end of the world had come as they had known no other pharaoh and no other kind of Egypt.'])
 
- article_two = Article.where(title: 'An Overview of Egyptian Dynastic History').first
- article_two.delete if article_two
+
 
 article_second = Article.create([title: 'An Overview of Egyptian Dynastic History', author: 'Prof. Gary Rendsburg', articleText: 'Scholars divide the history of ancient Egypt into the following epochs (note that the dates for early periods are very approximate):
 
@@ -103,13 +125,36 @@ article_second = Article.create([title: 'An Overview of Egyptian Dynastic Histor
  The name that dominates the later New Kingdom period is Rameses, with eleven such pharaohs bridging the 19th and 20th Dynasties (two from the 19th, nine from the 20th). Of these, the most famous by far is Rameses II (1279-1213 B.C.E.), associated by most scholars, myself included, with the pharaoh who instituted the slavery of the Hebrews in Exodus. Also noteworthy is his son Merneptah (1213-1203 B.C.E.), whose famous victory stela includes the oldest extra-biblical reference (and the only such one in Egyptian annals) to Israel.'])
 
 
+article_third = Article.create([title: 'The truth behind Egypt’s female pharaohs and their power', author: 'Simon Worall', articleText: 'A woman has yet to be elected to the highest office in the United States, but 3,000 years ago in ancient Egypt it wasn’t unusual for women to rule—and some became all powerful, like Cleopatra and Nefertiti. Yet as Kara Cooney explains in her new book, When Women Ruled the World: Six Queens of Egypt, those women were ultimately only placeholders for the next male to take the pharaoh’s throne.
+
+When National Geographic caught up with Cooney by phone in Los Angeles, she explained why Hatshepsut was so perfect; how Cleopatra grew up in a family that makes the Sopranos seem like lambs; and what these women symbolize for their society—and ours. She left Egypt better than she found it! Hatshepsut put Egypt and her dynasty onto a secure footing and created the next king, Thutmose III, who ended up being the Napoleon of Egypt, enlarging its empire beyond anything it had ever seen. She was very canny in how she used ideology to set herself up with unassailable power. She told her people: “The God has chosen me, it’s not my own ambition, it’s not my own wish but my father, the God Amon-Re has spoken to me and told me that I must do this.”
+
+The reason I’m so drawn to Hatshepsut is because she did everything so perfectly, which is something that is idealized. Success is very fungible. It’s something that someone else can claim and take credit for. Her name can easily be removed from a set of reliefs showing her building obelisks or sending expeditions to the land of Punt, and another name put in her place.
+
+Failure, on the other hand, is not abstract. [laughs] It involves suicide with asps or naval battles where everything goes horribly wrong. It’s something that is very individualized. Thus, we remember Cleopatra. Shakespeare wrote a play about her. But Hatshepsut we must resurrect from the ashes of history and investigate why female success is so easily ignored, while female failure is so beautifully aggrandized.'])
+
+article_four = Article.create([title: 'Discovery of a part of Amenhotep III statue', author: 'Angy Essam', articleText: 'CAIRO – 8 January 2018: A part of a statue for Amenhotep III was found underneath a parking lot located in Sohag Governorate.
+
+The Antiquities Committee, headed by Gamal Abdel Nasser, the general manager of Sohag antiquities sector, discovered the ancient part on Monday. The committee announced that the discovered part is from a statue of Amenhotep III made from black granite.
+
+The discovered part showed clearly that the statue was presented by the left foot forward, which is a tradition, shown in the statues of the kings of ancient Egypt. Also, in front of the right foot, there is a collection of Hieroglyphic writings about the coronation and birth of King Amenhotep III.
+
+Amenhotep III is the 9th Pharaoh of the 18th Dynasty. Amenhotep III, the son of Thutmose IV, was born around 1388 BC. The Thutmosid family ruled Egypt for about 150 years.
+
+Amenhotep III was married to queen Tiye and had two sons: Crown Prince Thutmose and Amenhotep IV, known as Akhenaten. Amenhotep III’s era was prosperous and artistic. At that time, Egypt was a leading country in arts, politics and international power.
+Amenhotep III was crowned when he was a child, aged 6 - 12.
+
+Amenhotep III has the largest number of discovered statues, about 250. These statues showed clearly the details of the Amenhotep IIIs era. He was buried in the Western Valley of the Valley of Kings.'])
 
 #Articles_Pharaohs
 
 
- art_pharaoh_one = PharaohArticle.create([pharaoh_id: Pharaoh.where(name: 'Tutankhamun').first.id , article_id: Article.where(title: 'The New Kingdom & the Amarna Period').first.id, name: 'Tutankhamun', title: 'The New Kingdom & the Amarna Period'])
+art_pharaoh_one = PharaohArticle.create([pharaoh_id: Pharaoh.where(name: 'Tutankhamun').first.id , article_id: Article.where(title: 'The New Kingdom & the Amarna Period').first.id, name: 'Tutankhamun', title: 'The New Kingdom & the Amarna Period'])
 
-
- art_pharaoh_two = PharaohArticle.create([pharaoh_id: Pharaoh.where(name: 'Ramesses II').first.id , article_id: Article.where(title: 'The New Kingdom & the Amarna Period').first.id, name: 'Ramesses II', title: 'The New Kingdom & the Amarna Period'])
+art_pharaoh_two = PharaohArticle.create([pharaoh_id: Pharaoh.where(name: 'Ramesses II').first.id , article_id: Article.where(title: 'The New Kingdom & the Amarna Period').first.id, name: 'Ramesses II', title: 'The New Kingdom & the Amarna Period'])
 
 art_pharaoh_three = PharaohArticle.create([pharaoh_id: Pharaoh.where(name: 'Hatshepsut').first.id , article_id: Article.where(title: 'An Overview of Egyptian Dynastic History').first.id, name: 'Hatshepsut', title: 'An Overview of Egyptian Dynastic History'])
+
+art_pharaoh_four = PharaohArticle.create([pharaoh_id: Pharaoh.where(name: 'Hatshepsut').first.id , article_id: Article.where(title: 'The truth behind Egypt’s female pharaohs and their power').first.id, name: 'Hatshepsut', title: 'The truth behind Egypt’s female pharaohs and their power'])
+
+art_pharaoh_five = PharaohArticle.create([pharaoh_id: Pharaoh.where(name: 'Amenhotep III').first.id , article_id: Article.where(title: 'Discovery of a part of Amenhotep III statue').first.id, name: 'Amenhotep III', title: 'Discovery of a part of Amenhotep III statue'])

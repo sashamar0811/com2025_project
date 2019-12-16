@@ -24,7 +24,7 @@ class PharaohTest < ActiveSupport::TestCase
 
       end
 
-    test 'should not save duplicate note title' do
+    test 'should not save duplicate pharaoh name' do
        pharaoh1 = Pharaoh.new
        pharaoh1.name = 'Ramesses II'
        pharaoh1.tenure = '1303–ca 1213 B.C.'
@@ -41,7 +41,7 @@ class PharaohTest < ActiveSupport::TestCase
        pharaoh2.biography = 'Ramses II recognized that diplomacy and an exhaustive public relations campaign could mitigate any military shortcomings. His celebrated building accomplishments, including the marvels at Karnak and Abu Simbel, reflected his vision of a great nation and of himself as the “ruler of rulers.” He erected more monuments and statues—and sired more children—than any other pharaoh. As a result, he has long been regarded by Egyptians as Ramses the Great and his 66-year reign is considered to be the height of Egypt’s power and glory.'
 
        pharaoh2.save
-       assert pharaoh2.valid?
+       refute pharaoh2.valid?
 
     end
 

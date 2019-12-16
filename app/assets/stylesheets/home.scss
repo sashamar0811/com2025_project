@@ -3,18 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 form label, form input{
-
-
   display: block;
   margin: 10px;
-  // text-align: center;
-  // margin-left: auto;
-  //   margin-right: auto;
 }
+
 form input{
   border: 3px solid #cdcdb1;
-   border-radius: 1px;
-
+  border-radius: 1px;
   box-sizing: content-box;
   padding: 5px 5px 5px 5px;
   -webkit-border-radius: 3px;
@@ -31,87 +26,69 @@ form input{
   transition: all 204ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
- .button{
-
+.button{
   padding-top: 200px;
   box-shadow:inset 0px 39px 0px -24px #a48938#a48938;
-	background-color:#a48938;
-	border-radius:4px;
-	border:1px solid #ffffff;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	padding:6px 15px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #b23e35;
+  background-color:#a48938;
+  border-radius:4px;
+  border:1px solid #ffffff;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  padding:6px 15px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #b23e35;
 }
 
 img {
-
   width: 30%;
   height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
-
   flex: 0 0 20%
-
 }
-
-
 
 .textHome{
-
-width: 100vw;
-height: 100vh;
-display: flex;
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-font-size: 2em;
-background: rgba(0, 0, 0,.8);
-transition: 5s;
-text-align: center;
-
-
-
-// text-align: center;
-// line-height: 100vh;
-// flex-grow: 1;
-// background-size: cover;
-// background-position: center;
-// transition: 2s;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  background: rgba(0, 0, 0,.8);
+  transition: 5s;
+  text-align: center;
 }
 
-  .textHome.phar{
-    width: 20vw;
-    text-align: center;
-    line-height: 100vh;
-    flex-grow: 1;
-    background: url(mainpharoh.jpg);
-    background-position: center;
-    transition: 1s;
-    letter-spacing: 2px;
-  }
-  .textHome.art{
-    width: 20vw;
-    text-align: center;
-    line-height: 100vh;
-    flex-grow: 1;
-    background: url(papyrus.jpg);
-  //  background-size: 300px 200px;
-    background-position: center;
-    transition: 1s;
-    border-style: ridge;
-    box-shadow:0 0 5px #f66 ;
-  //  border-width: 15px;
-    border-radius: 5px;
-  }
+.phar{
+  width: 20vw;
+  text-align: center;
+  line-height: 100vh;
+  flex-grow: 1;
+  background: url(mainpharoh.jpg);
+  background-position: center;
+  transition: 1s;
+  letter-spacing: 2px;
+}
+
+.art{
+  width: 20vw;
+  text-align: center;
+  line-height: 100vh;
+  flex-grow: 1;
+  background: url(papyrus.jpg);
+  background-position: center;
+  transition: 1s;
+  border-style: ridge;
+  box-shadow:0 0 5px #f66 ;
+  border-radius: 5px;
+}
 .textHome:hover{
   background: rgba(255, 255, 255, 0);
   letter-spacing: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,.5);
-
 }

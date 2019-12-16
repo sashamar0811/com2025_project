@@ -5,12 +5,14 @@ class PharaohsController < ApplicationController
   # GET /pharaohs.json
   def index
     @pharaohs = Pharaoh.all
+    @pharaohs = Pharaoh.search(params[:search]) unless params[:search].blank?
   end
 
   # GET /pharaohs/1
   # GET /pharaohs/1.json
   def show
     @pharaoh = Pharaoh.find(params[:id])
+    
   end
 
   # GET /pharaohs/new
